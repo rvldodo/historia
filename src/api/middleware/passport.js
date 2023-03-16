@@ -6,24 +6,6 @@ const ExtractJWT = require("passport-jwt").ExtractJwt;
 const PassportController = require("../controller/passportController");
 const UserService = require("../service/userService");
 
-// passport.use(
-// 	"login",
-// 	new LocalStrategy(
-// 		{ usernameField: "email", passReqToCallback: true },
-// 		PassportController.loginUser
-// 	)
-// );
-
-// passport.use(
-// 	new JWTStrategy(
-// 		{
-// 			secretOrKey: process.env.ACCESS_TOKEN_SECRET,
-// 			jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-// 		},
-// 		PassportController.tokenUser
-// 	)
-// );
-
 passport.use(
 	new GoogleStrategy(
 		{
